@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -7,22 +9,26 @@ export function ServicesSection() {
     {
       title: "Mesh Pool Fencing",
       description: "Removable mesh fencing that provides safety while maintaining visibility and aesthetics.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/meshpoolfence.webp",
       features: ["Removable", "Self-closing gate", "Transparent mesh", "Durable materials"],
     },
     {
       title: "Glass Pool Fencing",
       description: "Elegant glass panels that offer unobstructed views while ensuring pool safety.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/glasspoolfence2.jpeg",
       features: ["Frameless options", "Tempered safety glass", "Modern appearance", "Weather resistant"],
     },
     {
       title: "Aluminum Pool Fencing",
       description: "Classic and durable aluminum fencing that provides security with minimal maintenance.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/aluminumpoolfence.webp",
       features: ["Rust-proof", "Multiple styles", "Long-lasting", "Low maintenance"],
     },
   ]
+
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  }
 
   return (
     <section id="services" className="bg-white py-16 md:py-24">
@@ -74,15 +80,12 @@ export function ServicesSection() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full">
+                <Button variant="outline" className="w-full" onClick={scrollToContact}>
                   Learn More
                 </Button>
               </CardFooter>
             </Card>
           ))}
-        </div>
-        <div className="mt-12 text-center">
-          <Button size="lg">View All Services</Button>
         </div>
       </div>
     </section>

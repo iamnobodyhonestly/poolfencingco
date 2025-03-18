@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { PhoneCall, Mail, Clock, MapPin } from "lucide-react"
+import { PhoneCall, Mail, Clock } from "lucide-react"
 import { useState } from "react"
 
 export function ContactSection() {
@@ -80,14 +80,6 @@ export function ContactSection() {
                 <div>
                   <h4 className="font-medium">Hours</h4>
                   <p className="mt-1 text-muted-foreground">Monday - Sunday: 8am - 6pm</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 text-primary" />
-                <div>
-                  <h4 className="font-medium">Location</h4>
-                  <p className="mt-1 text-muted-foreground">123 Pool Safety Lane</p>
-                  <p className="text-muted-foreground">Houston, TX 77001</p>
                 </div>
               </div>
             </div>

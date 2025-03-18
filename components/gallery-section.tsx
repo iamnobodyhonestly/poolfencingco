@@ -1,14 +1,16 @@
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 
 export function GallerySection() {
   const galleryImages = [
-    { src: "/placeholder.svg?height=400&width=600", alt: "Mesh pool fence installation" },
-    { src: "/placeholder.svg?height=400&width=600", alt: "Glass pool fence with gate" },
-    { src: "/placeholder.svg?height=400&width=600", alt: "Aluminum pool fence" },
-    { src: "/placeholder.svg?height=400&width=600", alt: "Child-safe pool gate" },
-    { src: "/placeholder.svg?height=400&width=600", alt: "Modern pool fence design" },
-    { src: "/placeholder.svg?height=400&width=600", alt: "Pool fence with landscaping" },
+    { src: "/mesh1.jpg", alt: "Mesh pool fence installation" },
+    { src: "/mesh2.jpg", alt: "Glass pool fence with gate" },
+    { src: "/mesh3.jpg", alt: "Aluminum pool fence" },
+    { src: "/glass1.jpg", alt: "Child-safe pool gate" },
+    { src: "/glass2.webp", alt: "Modern pool fence design" },
+    { src: "/glass3.webp", alt: "Pool fence with landscaping" },
+    { src: "/alum1.webp", alt: "Aluminum pool fence installation" },
+    { src: "/alum2.avif", alt: "Residential aluminum fence" },
+    { src: "/alum3.jpg", alt: "Commercial aluminum fence" },
   ]
 
   return (
@@ -20,27 +22,19 @@ export function GallerySection() {
             Browse through our gallery of recent pool fencing installations to get inspired for your own project.
           </p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 max-w-5xl mx-auto">
           {galleryImages.map((image, index) => (
             <div key={index} className="group relative aspect-square overflow-hidden rounded-lg">
               <Image
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
-                width={600}
-                height={400}
+                width={500}
+                height={350}
                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <Button variant="outline" className="bg-white/80 text-black hover:bg-white">
-                  View Project
-                </Button>
-              </div>
+              <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
             </div>
           ))}
-        </div>
-        <div className="mt-12 text-center">
-          <Button size="lg">View Full Gallery</Button>
         </div>
       </div>
     </section>

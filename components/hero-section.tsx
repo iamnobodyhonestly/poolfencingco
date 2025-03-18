@@ -45,8 +45,8 @@ export function HeroSection() {
         </div>
         <div className="relative h-[400px] overflow-hidden rounded-xl lg:col-span-3">
           <Image
-            src="/placeholder.svg?height=800&width=1200"
-            alt="Pool with safety fence"
+            src="/parentinpool.jpg"
+            alt="Parent with child in a safely fenced pool"
             width={1200}
             height={800}
             className="h-full w-full object-cover"

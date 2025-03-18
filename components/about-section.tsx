@@ -45,20 +45,20 @@ export function AboutSection() {
           <div className="relative">
             <div className="relative h-[500px] overflow-hidden rounded-lg">
               <Image
-                src="/placeholder.svg?height=800&width=600"
-                alt="Pool fencing installation team"
+                src="/glasspoolfence.jpg"
+                alt="Glass pool fence installation"
                 width={600}
                 height={800}
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 h-48 w-48 overflow-hidden rounded-lg shadow-xl">
+            <div className="absolute -bottom-6 -left-6 h-48 w-48 overflow-hidden rounded-lg shadow-xl bg-white p-2">
               <Image
-                src="/placeholder.svg?height=200&width=200"
-                alt="Close-up of pool fence detail"
+                src="/poolfencinglogo.png"
+                alt="Pool Fencing Co Logo"
                 width={200}
                 height={200}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
