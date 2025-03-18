@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -16,7 +18,7 @@ export default function Home() {
         <div className="container flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/poolfencinglogo-36N65A1lBdgT2XtBJu0J9JEKjyVQUB.png"
+              src="/poolfencinglogo.png"
               alt="Pool Fencing Co Logo"
               width={80}
               height={80}
@@ -47,9 +49,11 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <div className="hidden md:block">
               <p className="text-sm font-medium">Call for a FREE Estimate</p>
-              <p className="text-lg font-bold text-primary">555-123-4567</p>
+              <p className="text-lg font-bold text-primary">346-524-1762</p>
             </div>
-            <Button className="hidden sm:inline-flex">Get a Quote</Button>
+            <Button className="hidden sm:inline-flex" onClick={() => window.location.href = 'tel:346-524-1762'}>
+              Get a Quote
+            </Button>
             <Button variant="outline" size="icon" className="md:hidden">
               <span className="sr-only">Toggle menu</span>
               <svg
