@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
@@ -14,10 +16,19 @@ export function HeroSection() {
             space.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Button size="lg" className="font-semibold">
+            <Button 
+              size="lg" 
+              className="font-semibold"
+              onClick={() => window.location.href = 'tel:346-524-1762'}
+            >
               Get a FREE Estimate
             </Button>
-            <Button size="lg" variant="outline" className="font-semibold">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="font-semibold"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Learn More
             </Button>
           </div>
